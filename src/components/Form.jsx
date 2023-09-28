@@ -52,49 +52,41 @@ export function Form({ setAlertMessage, setAlertColor }) {
   return (
     <form onSubmit={handleSubmit} noValidate>
       <div className="mb-3 mt-3">
-        <label htmlFor="nombre" className="form-label">
-          Name
-        </label>
         <input
           type="text"
           className="form-control border border-dark"
           id="name"
+          placeholder="Name"
           value={name}
           onChange={handleName}
         />
       </div>
       <div className="mb-3">
-        <label htmlFor="email" className="form-label">
-          Email
-        </label>
         <input
           type="email"
           className="form-control border border-dark"
           id="email"
+          placeholder="Email"
           value={email}
           onChange={handleEmail}
         />
       </div>
       <div className="mb-3">
-        <label htmlFor="password" className="form-label">
-          Password
-        </label>
         <input
           type="password"
           className="form-control border border-dark"
           id="password"
+          placeholder="Password"
           value={password}
           onChange={handlePassword}
         />
       </div>
       <div className="mb-3">
-        <label htmlFor="confirmPassword" className="form-label">
-          Confirm Password
-        </label>
         <input
           type="password"
           className="form-control border border-dark"
           id="confirmPassword"
+          placeholder="Confirm Password"
           value={confirmPassword}
           onChange={handleConfirmPassword}
         />
