@@ -1,13 +1,9 @@
-import { useState } from 'react';
 import { SocialButton } from './SocialButton';
 import { FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa';
 import { Alert } from './Alert';
 import { Form } from './Form';
 
-export function Registration() {
-  const [alertMessage, setAlertMessage] = useState('');
-  const [alertColor, setAlertColor] = useState('');
-
+export function Registration({alertMessage, setAlertMessage, alertColor, setAlertColor}) {
   return (
     <div className="container d-flex flex-column p-5 align-items-center justify-content-center">
         <div className="col-12 col-sm-10 col-md-8 col-lg-4 rounded-5 border p-4 bg-white"
