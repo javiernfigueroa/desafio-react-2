@@ -33,12 +33,15 @@ export function Form({ setAlertMessage, setAlertColor }) {
     if (!name || !email || !password || !confirmPassword) {
       setAlertMessage("There are blank fields");
       setAlertColor("")
+      return
     } else if (password !== confirmPassword) {
       setAlertMessage("The passwords do not match");
       setAlertColor("")
+      return
     } else if (!isValidEmail(email)){
       setAlertMessage("The email has an incorrect format");
       setAlertColor("")
+      return
     } else {
       setAlertMessage("Registration successful");
       setAlertColor("ok");
