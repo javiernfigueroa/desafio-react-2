@@ -4,13 +4,22 @@ import './App.css';
 
 function App() {
   const [alertMessage, setAlertMessage] = useState('');
-  const [alertColor, setAlertColor] = useState('');
+  const [alertColorClass, setAlertColorClass] = useState('');
+
+  const setAlertColor = (result) => {
+    if(result === 'ok') {
+      setAlertColorClass('alert-success');
+    } else {
+      setAlertColorClass('alert-danger');
+    }
+  }
+
   return (
     <>
       <Registration
         alertMessage={alertMessage}
         setAlertMessage={setAlertMessage}
-        alertColor={alertColor}
+        alertColor={alertColorClass}
         setAlertColor={setAlertColor}
       />
     </>

@@ -30,15 +30,13 @@ export function Form({ setAlertMessage, setAlertColor }) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    setAlertColor("");
     if (!name || !email || !password || !confirmPassword) {
       setAlertMessage("There are blank fields");
-      setAlertColor("")
     } else if (password !== confirmPassword) {
       setAlertMessage("The passwords do not match");
-      setAlertColor("")
     } else if (!isValidEmail(email)){
       setAlertMessage("The email has an incorrect format");
-      setAlertColor("")
     } else {
       setAlertMessage("Registration successful");
       setAlertColor("ok");
