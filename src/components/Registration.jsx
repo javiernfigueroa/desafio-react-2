@@ -21,12 +21,12 @@ export function Registration() {
             <SocialButton icon={<FaLinkedin />} />
           </div>
           <div className='d-flex flex-column justify-content-center'>
-             <Form setAlertMessage={setAlertMessage} setAlertColor={setAlertColor}></Form>
-             <div className='d-flex justify-content-center mt-2'>
-            {alertMessage && (
-              <Alert message={alertMessage} color={alertColor}/>
-            )}
-          </div>
+              <Form setAlertMessage={setAlertMessage} setAlertColor={setAlertColor}></Form>
+              <div className='d-flex justify-content-center mt-2'>
+                {alertMessage && (
+                  <Alert message={alertMessage} color={alertColor}/>
+                )}
+              </div>
           </div>
         </div>
     </div>
